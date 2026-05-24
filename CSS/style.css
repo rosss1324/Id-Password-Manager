@@ -1,0 +1,140 @@
+/* 기본 리셋 및 폰트 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url('../IMG/wallPaper.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+
+  /* 기존 레이아웃 유지를 위한 코드 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* 전체 감싸는 카드 레이아웃 */
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* 상단 타이틀 */
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1a202c;
+}
+
+/* 표(Table) 스타일링 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+#caption {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f8fafc; /* 행에 마우스 올렸을 때 은은한 하이라이트 효과 */
+}
+
+/* 하단 입력 폼 레이아웃 (가로 정렬) */
+#inputForm {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+/* 입력창 스타일 */
+#inputForm input {
+  flex: 1; /* 입력창들이 균등하게 공간을 나누어 가집니다 */
+  min-width: 0; /* flex 구조에서 입력창이 삐져나가는 것을 방지해요 */
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 입력창 클릭(포커스) 시 푸른색 강조 효과 */
+#inputForm input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Enter 버튼 스타일 */
+#addBtn {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* 버튼 마우스 오버 효과 */
+#addBtn:hover {
+  background-color: #1d4ed8;
+}
+
+#addBtn:active {
+  background-color: #1e40af;
+}
+
+/* 표 안의 삭제 버튼 스타일 */
+.delBtn {
+  padding: 5px 10px;
+  background-color: #ef4444; /* 경고를 의미하는 붉은색 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delBtn:hover {
+  background-color: #dc2626;
+}
+
+.delBtn:active {
+  background-color: #b91c1c;
+}
